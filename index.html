@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index-responsive.css">
+</head>
+<body>
+    <nav class="first">
+     <div class="main">
+        <div class="info">
+            <div class="email">
+            <i class="fa-solid fa-envelope"></i>
+            <p style="color: #fff;">sohaibdanialahmed@gmail.com</p>
+            </div>
+            <div class="whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <p style="color: #fff;">+923215085443</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <a href="https://www.facebook.com/sohaibahmed.qazi" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/muhammad-asif-asif-gondal-619810237/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/sohaib_gondal_786/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+     </div>
+    </nav>
+    <!--Header starts for nav items-->
+    <header class="head">
+        <div class="relate">
+        <div class="logo">
+       <a href="index.html"> <img src="Images/logo-buisness.png" alt="logo"></a>
+        </div>
+        <div class="list">
+            <i class="fa-solid fa-bars" id="open"></i>
+            <i class="fa-solid fa-xmark" id="close"></i>
+            <ul>
+                <a href="#"><li onclick="scrollToSection('home')">Home</li></a>
+                <a href="#"><li onclick="scrollToSection('about-us')">About Us</li></a>
+                <a href="#"><li onclick="scrollToSection('contact-us')">Contact Us</li></a>
+                <a href="#"><li onclick="scrollToSection('services')">Services</li></a>
+                <a href="#"><button id="hire">Hire Us</button></a>
+            </ul>
+        </div>
+        </div>
+        <div class="small-list" id="list">
+            <ul>
+                <a href="#"><li onclick="scrollToSection('home')">Home</li></a>
+                <hr>
+                <a href="#"><li onclick="scrollToSection('about-us')">About Us</li></a>
+                <hr>
+                <a href="#"><li onclick="scrollToSection('contact-us')" >Contact Us</li></a>
+                <hr>
+                <a href="#"><li onclick="scrollToSection('services')">Services</li></a>
+                <hr>
+                <a href="#"><button id="pick">Hire Us</button></a>
+            </ul>
+        </div>
+        <div id="hiring-popup" class="hiring-popup">
+            <div class="hiring-form">
+                <span id="close-that" class="closing-button">&times;</span>
+                <h2>Hire Us</h2>
+                <form>
+                    <label for="name_1">First Name:</label>
+                    <input type="text" id="fname" name="f-name" required>
+        
+                    <label for="name_2">Last Name:</label>
+                    <input type="text" id="lname" name="l-name" required>
+        
+                    <label for="omail">Email:</label>
+                    <input type="email" id="email" name="place" required>
+    
+                    <label for="phone-1">Phone No:</label>
+                    <input type="tel" id="tele" name="tele">
+    
+                    <label for="Service_Type">Service Type:</label>
+                    <select name="service" id="service">
+                        <option disabled selected value="Service You Want">Purpose Of Hiring</option>
+                        <option value="Website Development">Website Development</option>
+                        <option value="Website Designing">Website Designing</option>
+                        <option value="Logo Designing">Logo Designing</option>
+                        <option value="Debugging Code">Debugging Code</option>
+                        <option value="PDF To HTML">PDF To HTML</option>
+                        <option value="Video Animations">Video Animations</option>
+                    </select>
+                    <input type="submit" id="finished" placeholder="Book Order">
+                </form>
+            </div>
+        </div>
+        <!--Code for the popup form which starts here-->
+        <div id="hiring-popup-1" class="hiring-popup-1">
+            <div class="hiring-form-1">
+                <span id="close-that-1" class="closing-button-1">&times;</span>
+                <h2>Hire Us</h2>
+                <form>
+                    <label for="name_3">First Name:</label>
+                    <input type="text" id="fname" name="f-name" required>
+        
+                    <label for="name_4">Last Name:</label>
+                    <input type="text" id="lname" name="l-name" required>
+        
+                    <label for="imail">Email:</label>
+                    <input type="email" id="email" name="place" required>
+    
+                    <label for="phone-2">Phone No:</label>
+                    <input type="tel" id="tele" name="tele">
+    
+                    <label for="Service type">Service Type:</label>
+                    <select name="service" id="service">
+                        <option disabled selected value="Service You Want">Purpose Of Hiring</option>
+                        <option value="Website Development">Website Development</option>
+                        <option value="Website Designing">Website Designing</option>
+                        <option value="Logo Designing">Logo Designing</option>
+                        <option value="Debugging Code">Debugging Code</option>
+                        <option value="PDF To HTML">PDF To HTML</option>
+                        <option value="Video Animations">Video Animations</option>
+                    </select>
+                    <input type="submit" id="finished-1" placeholder="Book Order">
+                </form>
+            </div>
+        </div>
+        <!--COde for the second popup form which ends here successfully-->
+    </header>
+    <section class="content">
+        <div class="box-content">
+            <div class="content-main">
+                <h1>WEBSITE DEVELOPMENT</h1>
+                <p>
+                    Our team of skilled developers understands the dynamic nature of the internet and is committed to 
+                    crafting websites that not only captivate audiences visually but also deliver seamless, intuitive 
+                    navigation. From responsive design that adapts to various devices to robust backend development 
+                    ensuring optimal performance, we take a comprehensive approach to bring your online vision to life.
+                </p>
+            </div>
+            <div class="content-normal">
+                <h1>WEBSITE DESIGNING</h1>
+                <p>
+                    We believe that a well-designed website is more than just an aesthetically pleasing arrangement of
+                     elements; it's a reflection of your brand's identity and a vital tool in conveying your message to 
+                     the world. Our design process begins with a thorough understanding of your business goals, target 
+                     audience, and unique value proposition, ensuring that every visual element serves a strategic purpose.
+                </p>
+            </div>
+        </div>
+        <div class="select">
+        <button id="joining">JOIN US</button>
+        </div>
+        <div id="enquiry-popup" class="enquiry-popup">
+            <div class="enquiry-form">
+                <span id="close-it" class="close">&times;</span>
+                <h2>Enquire Now</h2>
+                <form>
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="pehla" required>
+        
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="akhri" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="jagah" required>
+    
+                    <label for="Phone Number">Phone No:</label>
+                    <input type="tel" id="tele" name="faon">
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" placeholder="Please enter all the details given above and your message for us..." name="information" rows="4" required></textarea>
+        
+                    <input type="submit" id="submit">
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="about-us" id="about-us">
+     <div class="start">
+        <h1>ABOUT PRODEVSOLUTIONS </h1> <br>
+        <p>
+            Welcome to ProdevSolutions, where innovation meets creativity in the digital realm. We are a dynamic team of 
+            tech enthusiasts, designers, and visionaries dedicated to bringing your ideas to life through cutting-edge web
+             development, striking website design, captivating logo creation, and mesmerizing video animations.
+        </p> <br>
+        <h2>OUR MISSION</h2> <br>
+        <p>
+            At ProdevSolutions, our mission is to empower businesses, startups, and individuals by providing a comprehensive
+             suite of digital services that elevate their online presence. We believe in the magic of the digital world, and
+              our wizards are here to weave spells of functionality and beauty into every project we undertake.
+        </p> <br>
+        <h1>WHAT SETS US APART</h1>
+        <p> <br>
+            <b>Expertise:-</b> 
+            Our team comprises seasoned professionals with a passion for staying ahead of the technological curve. We don't
+            just follow industry trends; we set them. From robust web development solutions to visually stunning designs, 
+            our expertise is your advantage. <br><br>
+            <b>Innovation:-</b> 
+            In the ever-evolving digital landscape, innovation is our constant companion. We embrace new technologies and 
+            design trends, ensuring that your project not only meets current standards but also anticipates future 
+            expectations. <br><br>
+            <b>Collaboration:-</b> 
+            Your vision is our priority. We believe in collaborative partnerships, working closely with our clients to 
+            understand their unique goals and requirements. Your success is our success, and we take pride in being your 
+            trusted digital partner.
+        </p>
+     </div>
+    </section>
+    <section class="contact-us" id="contact-us">
+    <div class="special">
+        <div class="heading">
+       <h1>FEEL FREE TO CONTACT US WE ARE HERE TO SERVE YOU</h1>
+        </div>
+        <div class="form">
+        <form>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="email" placeholder="Your E-Mail" required>
+            <textarea id="message" placeholder="Enter your feedback/problem in details we will contact you ASAP..." name="information" rows="4" required></textarea>
+            <input type="submit" class="done">
+        </form>
+        </div>
+    </div>
+    </section>
+    <section class="services" id="services">
+    <div class="flexbox">
+        <div class="top">
+            <h1>OUR SERVICES</h1>
+        </div>
+        <div class="boxes">
+            <div class="box">
+                <div class="index">
+                <h1>
+                    WEBSITE DEVELOPMENT
+                </h1>
+                <p>
+                    Our web development services are tailored to transform your ideas into dynamic and responsive websites.
+                     Our skilled team of developers employs the latest technologies to create robust and scalable web 
+                     solutions. From front-end development using HTML, CSS, and JavaScript and from back-end we use PHP
+                     we ensure that your website not only looks great but also functions seamlessly. Whether you need an
+                    e-commerce platform, a content management system, or a custom web application, our web development 
+                    services are designed to meet your unique business requirements.
+                </p>
+            </div>
+            </div>
+            <div class="box">
+                <div class="index">
+                <h1>WEBSITE DESIGNING</h1>
+                <p>
+                    Our web designing services focus on creating visually stunning and user-friendly interfaces. We 
+                    understand the importance of a well-designed website in making a lasting impression on your audience. 
+                    Our team of creative designers combines aesthetics with functionality to deliver modern and engaging 
+                    designs. From wireframing and prototyping to the final user interface, we pay attention to every detail
+                    to ensure a seamless and delightful user experience. Elevate your online presence with our web designing
+                    expertise.We will make your website responsive to elevate your buisness.
+                </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="index">
+                <h1>LOGO DESIGNING</h1>
+                <p>
+                    A logo is the face of your brand, and our logo designing services are dedicated to creating distinctive
+                    and memorable brand identities. Our team of talented graphic designers collaborates with you to 
+                    understand your brand values and goals. We then craft unique and meaningful logos that reflect the 
+                    essence of your business. Whether you're launching a new brand or rebranding, our logo designing 
+                    services are geared towards creating visuals that leave a lasting impact. Your logo is actually the 
+                    reflection of your buisness and your organization. Our team will make some extra-ordinary looking Logo's.
+                </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="index">
+                <h1>PDF TO HTML</h1>
+                <p>
+                    Transforming static PDF documents into dynamic and interactive HTML content is our expertise. Our PDF 
+                    to HTML services ensure that your content is accessible across various devices and platforms. We 
+                    meticulously convert your PDF files into well-structured HTML, making the information easily navigable 
+                    and responsive. Whether you have brochures, reports, or other documents, our services help you bring your
+                    content to life on the web. You just have to share your PDF to us and our team will make it quick converted
+                    into live HTML Document with full responsive design in a shorter time.
+                </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="index">
+                <h1>DEBUG CODE</h1>
+                <p>
+                    Our debugging services are aimed at ensuring that your web applications run smoothly and efficiently. 
+                    We understand the frustration that comes with errors and glitches. Our experienced team of developers 
+                    employs systematic debugging processes to identify and fix issues in your code. From simple syntax 
+                    errors to complex performance issues, we provide comprehensive debugging services to enhance the 
+                    functionality and reliability of your web applications. Our experiened team will review your code
+                    and shortly terminate the error in it and solve your problems in a shorter time.
+                </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="index">
+                <h1>VIDEO ANIMATIONS</h1>
+                <p>
+                    Bring your ideas to life with our video animation services. Our creative team combines storytelling 
+                    with cutting-edge animation techniques to create engaging and impactful videos. Whether you need 
+                    explainer videos, product animations, or promotional content, our video animation services add a 
+                    dynamic element to your marketing strategy. From concept development to final production, we are 
+                    committed to delivering visually compelling animations that captivate your audience.Our team is 
+                    dedicated to bringing your vision to reality with creativity, technical expertise, and a commitment to
+                    excellence.
+                </p>
+                </div>
+            </div>
+    </div>
+    </div>
+    <div class="get">
+        <button id="order">Order Service</button>
+    </div>
+    <div id="booking-popup" class="booking-popup">
+        <div class="booking-form">
+            <span id="close-this" class="close-button">&times;</span>
+            <h2>Order Now</h2>
+            <form>
+                <label for="name-1">First Name:</label>
+                <input type="text" id="fname" name="f-name" required>
+    
+                <label for="name-2">Last Name:</label>
+                <input type="text" id="lname" name="l-name" required>
+    
+                <label for="gmail">Email:</label>
+                <input type="email" id="email" name="place" required>
+
+                <label for="phone">Phone No:</label>
+                <input type="tel" id="tele" name="tele">
+
+                <label for="Service-Type">Service Type:</label>
+                <select name="service" id="service">
+                    <option disabled selected value="Service You Want">Service You Want</option>
+                    <option value="Website Development">Website Development</option>
+                    <option value="Website Designing">Website Designing</option>
+                    <option value="Logo Designing">Logo Designing</option>
+                    <option value="Debugging Code">Debugging Code</option>
+                    <option value="PDF To HTML">PDF To HTML</option>
+                    <option value="Video Animations">Video Animations</option>
+                </select>
+                <input type="submit" id="cleared" placeholder="Book Order">
+            </form>
+        </div>
+    </div>
+    </section>
+    <section class="footer">
+        <p>
+            &copy; 2023 WebWizards Hub. All Rights Reserved.
+        </p>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

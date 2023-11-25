@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.first{
+    position: relative;
+    height: 8vh;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)) ;
+    overflow: hidden;
+}
+.first>.main{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    padding-top: 2vh;
+}
+.first>.main>.info{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 2vw;
+}
+.first>.main>.info>.email>.fa-envelope{
+    color:#ea4335;
+    font-size: 20px;
+}
+.first>.main>.info>.email{
+ display: flex;
+ align-items: center;
+ gap: 1vw;
+}
+.first>.main>.info>.whatsapp{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.first>.main>.info>.whatsapp>.fa-whatsapp{
+    color: #11ba17;
+    font-size: 20px;
+}
+.first>.main>.icons{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.first>.main>.icons>a>.fa-facebook{
+    color:#0866ff;
+    font-size: 23px;
+}
+.first>.main>.icons>a>.fa-instagram{
+    color: #d03f7c;
+    font-size: 23px;
+}
+.first>.main>.icons>a>.fa-linkedin{
+    color: #0077b5;
+    font-size: 23px;
+}
+.first>.main>.icons>a>.fa-facebook:hover , .fa-instagram:hover , .fa-linkedin:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+}
+.head{
+    position: relative;
+    height: 13vh;
+    width: 100%;
+    max-width: 100%;
+   max-height: 100%;
+    background-color:#1dbf73;
+}
+.head>.relate{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.head>.relate>.logo{
+  width:20vw;
+  height: 12vh;
+}
+.head>.relate>.logo>a>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.head>.relate>.list>.fa-bars{
+   font-size: 35px;
+   display: none;
+   color: #fff;
+   cursor: pointer;
+}
+.head>.relate>.list>.fa-xmark{
+font-size: 35px;
+display: none;
+color: #fff;
+cursor: pointer;
+}
+.head>.relate>.list>ul{
+    padding-top: 1vh;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+}
+.head>.relate>.list>ul>a{
+    text-decoration: none;
+    color: #fff;
+}
+.head>.relate>.list>ul>a>li{
+    font-family: 'Montserrat' , 'sans-serif';
+    font-size: 17px;
+    font-weight: 400;
+}
+.head>.relate>.list>ul>a>button{
+    /*margin: 1.5vh auto;*/
+    width: 10vw;
+    height: 7vh;
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)) ;
+    color: #fff;
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 500;
+    font-size: 17px;
+    border: 1px solid #f8f8f8;
+    transition: all 0.75s ease-out;
+}
+.head>.relate>.list>ul>a>button:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+.head>.small-list{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0;
+    display: none;
+}
+.head>.small-list>ul{
+    list-style: none;
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)) ;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid gray;
+    line-height: 55px;
+    margin-left: 0;
+}
+.head>.small-list>ul>a>li{
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 400;
+    font-size: 17px;
+}
+.head>.small-list>ul>a{
+    text-decoration: none;
+    color: #000;
+}
+.head>.small-list>ul>a>button{
+    width: 15vw;
+    height: 15vh;
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)) ;
+    color: #fff;
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+.head>.small-list>ul>hr{
+    width: 100%;
+}
+.hiring-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10000000000000;
+}
+
+.hiring-form {
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 400;
+  background-color: #fff;
+  width: 60%;
+  max-width: 400px;
+  margin: 0px auto;
+  padding: 0;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.closing-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ form label {
+  display: block;
+  margin-top: 10px;
+}
+
+ form input,
+form select,
+form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+ form input[type="submit"] {
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)) ;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+/*for the second time popup form the code starts here*/
+.hiring-popup-1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10000000000000;
+}
+
+.hiring-form-1 {
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 400;
+  background-color: #fff;
+  width: 60%;
+  max-width: 400px;
+  margin: 0px auto;
+  padding: 0;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.closing-button-1 {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ form label {
+  display: block;
+  margin-top: 10px;
+}
+
+ form input,
+form select,
+form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+ form input[type="submit"] {
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)) ;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+/*for the second time popoup form the ends here*/
+.content{
+    position: relative;
+   background-image:linear-gradient(rgba(104, 222, 194, 1) ,rgba(29, 191, 115, 1) );
+   background-repeat: no-repeat;
+   background-size: cover;
+    height: 80vh;
+}
+.content>.box-content{
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+.content>.box-content>.content-main{
+    width: 45vw;
+    height: 50vh;
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid #fff;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5vh;
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)) ;
+    overflow: hidden;
+    transition: all 1.25s ease-in-out;
+    animation-name: ahmed;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; /* Add this line for smoother motion */
+}
+.content>.box-content>.content-main>h1{
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+}
+.content>.box-content>.content-main>p{
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+}
+
+.content>.box-content>.content-normal{
+    width: 45vw;
+    height: 50vh;
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid #fff;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5vh;
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)) ;
+    overflow: hidden;
+    transition: all 1.25s ease-in-out;
+    animation-name: ahmed;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; /* Add this line for smoother motion */
+}
+@keyframes ahmed{
+    0%{
+        background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)); 
+    }
+    25%{
+        background:linear-gradient(to left,rgb(71, 231, 156) , rgba(103,200,190,1));
+    }
+    50%{
+        background:linear-gradient(to top,rgb(71, 231, 156) , rgba(103,200,190,1));
+    }
+    100%{
+        background:linear-gradient(to bottom,rgb(71, 231, 156) , rgba(103,200,190,1));
+    }
+}
+.content>.box-content>.content-normal>h1{
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+}
+.content>.box-content>.content-normal>p{
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+}
+.content>.select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10vh auto;
+}
+.content>.select>button{
+    width: 10vw;
+    height: 7vh;
+    border: 1px solid #f8f8f8;
+    border-radius: 10px;
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)) ;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.75s ease-out;
+    font-family: 'Montserrat' , 'sans-serif';
+    font-size: 17px;
+    font-weight: 500;
+}
+.content>.select>button:hover{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid black;
+}
+.enquiry-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10000000000000;
+}
+
+.enquiry-form {
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 400;
+  background-color: #fff;
+  width: 60%;
+  max-width: 400px;
+  margin: 0px auto;
+  padding: 0;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input,
+form textarea,
+form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+form input[type="submit"] {
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)) ;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+.about-us{
+    position: relative;
+    height: 120vh;
+    background-image:linear-gradient(to right,rgb(71, 231, 156,0.5) , rgba(103,200,190,0.5)) , url(Images/real.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-us>.start{
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.about-us>.start>h1,h2,p{
+    text-align: center;
+}
+.about-us>.start>h1 , h2{
+    font-family: 'Montserrat' , 'sans-serif';
+    font-size: 25px;
+    font-weight: 400;
+}
+.about-us>.start>p{
+    font-family: 'Montserrat' , 'sans-serif';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.contact-us{
+    position: relative;
+    height: 100vh;
+    background:linear-gradient(to bottom,rgb(71, 231, 156) , rgba(103,200,190,1));
+}
+.contact-us>.special{
+    padding-top: 10vh ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+.contact-us>.special>.heading>h1{
+    font-family: 'Montserrat' , 'sans-serif';
+    text-align: center;
+    font-weight: 400;
+}
+.contact-us>.special>.form{
+    padding-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
+    height: 70vh;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #ffff;
+    padding: 0;
+    border: 1px solid transparent;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.contact-us>.special>.form>form>input{
+    width: 22vw;
+    max-width: 100%;
+}
+.contact-us>.special>.form>form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+.services{
+    position: relative;
+    height: 160vh;
+    background-color:#00b98e;
+    /*background:linear-gradient(to bottom,rgb(71, 231, 156) , rgba(103,200,190,1));*/
+}
+.services>.flexbox{
+    padding-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+.services>.flexbox>.top>h1{
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 400;
+    text-align: center;
+}
+.services>.flexbox>.boxes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+.services>.flexbox>.boxes>.box{
+    width: 30vw;
+    height: 60vh;
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid transparent;
+    border-top-right-radius:25px;
+    border-bottom-left-radius: 25px;
+    background:linear-gradient(to bottom,rgb(71, 231, 156) , rgba(103,200,190,1));
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 400;
+    transition: all 1.25s ease-in-out;
+    animation-name: sohaib;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; /* Add this line for smoother motion */
+}
+@keyframes sohaib {
+    0%, 100% {
+        transform: translateY(-5%);
+    }
+    50% {
+        transform: translateY(5%);
+    }
+}
+.services>.flexbox>.boxes>.box>.index{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+.services>.flexbox>.boxes>.box>.index>h1{
+    padding-top: 5vh;
+    text-align: center;
+    text-decoration: underline;
+}
+.services>.get{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5vh auto;
+}
+.services>.get>button{
+    width: 10vw;
+    height: 7vh;
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)) ;
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.75s ease-out;
+}
+.services>.get>button:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+.services>.flexbox>.boxes>.box>.index>p{
+    text-align: center;
+}
+.booking-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10000000000000;
+}
+
+.booking-form {
+    font-family: 'Montserrat' , 'sans-serif';
+    font-weight: 400;
+  background-color: #fff;
+  width: 60%;
+  max-width: 400px;
+  margin: 0px auto;
+  padding: 0;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ form label {
+  display: block;
+  margin-top: 10px;
+}
+
+ form input,
+form select,
+form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+ form input[type="submit"] {
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1)) ;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+.footer{
+    height: 10vh;
+    background:linear-gradient(to right,rgb(71, 231, 156) , rgba(103,200,190,1));
+    animation-name: ahmed;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; /* Add this line for smoother motion */
+}
+.footer>p{
+    text-align: center;
+    padding-top: 3.5vh;
+    font-family: 'Montserrat' , 'sans-serif';
+    font-size: 20px;
+    font-weight: 400;
+}
